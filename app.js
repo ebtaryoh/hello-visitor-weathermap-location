@@ -1,7 +1,9 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
 const PORT = 3000;
-
+app.use(cors());
 const helloVisitorRouter = require("./helloVisitorRouter");
 
 app.use("/api", helloVisitorRouter);
